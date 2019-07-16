@@ -1,7 +1,7 @@
 # liri-app 
-# developed by Kevin Steele for GWU Full Stack Web Development BootCamp 
+# Developed by Kevin Steele for GWU Full Stack Web Development BootCamp 
 
-*Github repo: https://github.com/kevdsteele/liri-app
+**Github repo**: https://github.com/kevdsteele/liri-app
 
 ## liri-app is a CLI application that is a play on Apple's Siri voice assistant. Type text commands in a terminal window to retrieve results. 
 
