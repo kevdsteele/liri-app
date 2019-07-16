@@ -1,5 +1,5 @@
 # liri-app 
-# Developed by Kevin Steele for GWU Full Stack Web Development BootCamp 
+# Fully developed by Kevin Steele for GWU Full Stack Web Development BootCamp 
 
 **Github repo**: https://github.com/kevdsteele/liri-app
 
@@ -8,7 +8,7 @@
 ## liri-app dependencies 
 
 * **Node.JS** must be installed to run liri-app
-> *Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages must also be installed before running liri-app*
+> *[Axios](https://www.npmjs.com/package/axios), Chalk, DotEnv, Moment, Node-Spotify-API node packages must also be installed before running liri-app*
 
 > Also uses the built in Node FS command to read an external text file 
 
