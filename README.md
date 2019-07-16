@@ -115,6 +115,12 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 ![Liri-do1](lirid1.png)
 
+### node liri.js do-what-it-says random.txt file
+
+![Liri-do2](lirid2.png)
+
+
+
 
 
 
