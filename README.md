@@ -8,7 +8,7 @@
 ## liri-app dependencies 
 
 * **Node.JS** must be installed to run liri-app
-> *[Axios](https://www.npmjs.com/package/axios), Chalk, DotEnv, Moment, Node-Spotify-API node packages must also be installed before running liri-app*
+> *[Axios](https://www.npmjs.com/package/axios), [Chalk](https://www.npmjs.com/package/chalk), [DotEnv](https://www.npmjs.com/package/dotenv), [Moment] (https://www.npmjs.com/package/moment), [Node-Spotify-API] (https://www.npmjs.com/package/node-spotify-api) node packages must also be installed before running liri-app*
 
 > Also uses the built in Node FS command to read an external text file 
 
