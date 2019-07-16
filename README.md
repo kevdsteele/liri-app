@@ -1,4 +1,5 @@
-# liri-app developed by Kevin Steele for GWU Full Stack Web Development BootCamp 
+# liri-app 
+# developed by Kevin Steele for GWU Full Stack Web Development BootCamp 
 
 *Github repo: https://github.com/kevdsteele/liri-app
 
