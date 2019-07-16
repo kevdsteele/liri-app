@@ -1,6 +1,13 @@
 # liri-app
 
-## liri-app is a CLI application that is a play on Apple's Siri application. This application supports the base command of node liri.js with four command switches
+## liri-app is a CLI application that is a play on Apple's Siri application. 
+
+## liri-app dependencies 
+
+* **Node.JS** 
+* *Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages*
+
+This application supports the base command of node liri.js with four command switches
 
 1. **spotify-this**
 * Search for a song/track on Spotify. Returns the top matching result. For increased accuracy, please include the full track name and consider adding the artist after the track name.
