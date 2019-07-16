@@ -43,7 +43,7 @@
 
 ### liri-app Organization
 #### Functions
-1. liriBot is the primary function that processes the search type and search term processed via argv values and calls one of 3 functions using a switch statement. 
+1. liriBot is the primary function that processes the search type and search term via argv values and calls one of 3 functions using a switch statement. 
 
 2. spotifySearch uses node-spotify-api to search Spotify
 
@@ -53,7 +53,7 @@
 
 #### Switch Statement to evaluate command line agruements and call the associated function
 
-* The swich statement for **do-what-it-says** first uses FS to read the external text file values and then passes the values to the liriBot function
+* The swich statement for **do-what-it-says** first uses FS to read the external text file values and then passes the values to the primary liriBot function
 
 #### keys.js, .env file and DotEnv node package used to process and protect the Spotify API key 
 
