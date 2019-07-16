@@ -111,6 +111,10 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 ![Liri-movie2](lirim2.png)
 
+### node liri.js do-what-it-says
+
+![Liri-do1](lirid1.png)
+
 
 
 
