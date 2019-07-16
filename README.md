@@ -12,6 +12,18 @@
 
 > Also uses the built in Node FS command to read an external text file 
 
+#### The keys.js, .env file and DotEnv node package used to process and protect the Spotify API key 
+
+*!!!!You will need to create your own .env file and format it as below!!!!*
+
+####SPOTIFY API KEYS
+
+SPOTIFY_ID=your_spotify_ID <br/>
+SPOTIFY_SECRET=your_spotify_secret <br/>
+
+*Please create a free Spotify account if you do not already have one and then visit https://developer.spotify.com/my-applications/#!/ to create a new application which will provide your Spotify_ID and Sptofiy_Secret*
+
+
 ## This application is run by typing *node liri.js* with one of four command switches
 
 1. **spotify-this**
@@ -58,16 +70,6 @@
 
 * The swich statement for **do-what-it-says** first uses FS to read the external text file values and then passes the values to the primary liriBot function
 
-#### keys.js, .env file and DotEnv node package used to process and protect the Spotify API key 
-
-*!!!!You will need to create your own .env file and format it as below!!!!*
-
-####SPOTIFY API KEYS
-
-SPOTIFY_ID=your_spotify_ID <br/>
-SPOTIFY_SECRET=your_spotify_secret <br/>
-
-*Please create a free Spotify account if you do not already have one and then visit https://developer.spotify.com/my-applications/#!/ to create a new application which will provide your Spotify_ID and Sptofiy_Secret*
 
 
 
