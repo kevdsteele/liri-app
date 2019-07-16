@@ -1,4 +1,6 @@
-# liri-app
+# liri-app developed by Kevin Steele for GWU Full Stack Web Development BootCamp 
+
+*Github repo: https://github.com/kevdsteele/liri-app
 
 ## liri-app is a CLI application that is a play on Apple's Siri voice assistant. Type text commands in a terminal window to retrieve results. 
 
@@ -40,7 +42,7 @@
 
 ### liri-app Organization
 #### Functions
-1. liriBot is the primary function that processes the search type and search term processed via argv values and calls one of 4 functions using a switch statement. 
+1. liriBot is the primary function that processes the search type and search term processed via argv values and calls one of 3 functions using a switch statement. 
 
 2. spotifySearch uses node-spotify-api to search Spotify
 
@@ -48,7 +50,9 @@
 
 4. movieSearch 
 
-#### Switch Statement to evaluate command line agruements
+#### Switch Statement to evaluate command line agruements and call the associated function
+
+* The swich statement for **do-what-it-says** first uses FS to read the external text file values and then passes the values to the liriBot function
 
 #### keys.js, .env file and DotEnv node package used to process and protect the Spotify API key 
 
