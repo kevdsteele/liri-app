@@ -87,6 +87,17 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 ![Liri-no-command](liri1.png)
 
+### node liri.js spotify-this i want it that way 
+
+![Liri-spotify1](liri2.png)
+
+### node liri.js spotify-this no search term
+
+![Liri-spotify1](liri3.png)
+
+
+
+
 
 
 
