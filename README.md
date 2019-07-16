@@ -64,7 +64,7 @@
 SPOTIFY_ID=your_spotify_ID <br/>
 SPOTIFY_SECRET=your_spotify_secret <br/>
 
-*Please create a free Spotify account if you do not already have one and then visit https://developer.spotify.com/my-applications/#!/ to create a new application which will provide your Spotify_ID and Sptofiy_Secret
+*Please create a free Spotify account if you do not already have one and then visit https://developer.spotify.com/my-applications/#!/ to create a new application which will provide your Spotify_ID and Sptofiy_Secret*
 
 
 
