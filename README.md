@@ -12,7 +12,7 @@
 
 > Also uses the built in Node FS command to read an external text file 
 
-## This application is run by typing node liri.js with one of four command switches
+## This application is run by typing *node liri.js* with one of four command switches
 
 1. **spotify-this**
 > Search for a song/track on Spotify. Returns the top matching result. For increased accuracy, please include the full track name and consider adding the artist after the track name.
