@@ -57,7 +57,7 @@
 
 #### keys.js, .env file and DotEnv node package used to process and protect the Spotify API key 
 
-**You will need to create your own .env file and format it as below**
+**!!!!You will need to create your own .env file and format it as below!!!!**
 
 ####SPOTIFY API KEYS
 
