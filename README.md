@@ -103,6 +103,16 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 ![Liri-concert2](liric2.png)
 
+### node liri.js movie-this star wars
+
+![Liri-movie1](lirim1.png)
+
+### node liri.js movie-this no search term
+
+![Liri-movie2](lirim2.png)
+
+
+
 
 
 
