@@ -1,11 +1,11 @@
 # liri-app
 
-## liri-app is a CLI application that is a play on Apple's Siri voice assistant. 
+## liri-app is a CLI application that is a play on Apple's Siri voice assistant. Type text commands in a terminal window to retrieve results. 
 
 ## liri-app dependencies 
 
-* **Node.JS** 
-> *Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages*
+* **Node.JS** must be installed to run liri-app
+> *Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages must be installed before running liri-app*
 
 ## This application is run by typing node liri.js with one of four command switches
 
@@ -35,6 +35,13 @@
 4.  **do-what-it-says**
 
 > Accesses a text file named random.txt which contains a command switch and search term that is read and then executed
+
+### liri-app consists of 5 functions
+### liriBot is the prmary function that processes the search type and search term processed via argv values and calls one of 4 functions using a switch statement.
+
+
+
+
 
 
 
