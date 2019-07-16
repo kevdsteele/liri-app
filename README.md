@@ -34,12 +34,18 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 * Example: *node liri.js spotify-this I Want It That Way* 
 * Example: *node liri.js spotify-this I Want It That Way Backstreet Boys*
 
+*If no search term is entered, a search for I Saw The Sign will be performed
+
 2.  **concert-this**
 > Search Bands in Town for the next concert date for a band or artist.
 
 > Returns the name of the concert venue, the venue location and date of the concert
 
 * Example: *node liri.js concert-this BackStreet Boys*
+
+*If no search term is entered, a search for Jonas Brothers will be performed
+
+
 
 3.  **movie-this**
 
@@ -48,6 +54,8 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 > Returns the following infor for the Movie: title, year made, IMDB rating, Rotten Tomatoes rating, language, plot, actors and the country where the movie was produced 
 
 * Example: *node liri.js movie-this Star Wars*
+
+*If no search term is entered, a search for Mr Nobody will be performed
 
 4.  **do-what-it-says**
 

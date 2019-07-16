@@ -20,8 +20,6 @@ var log = console.log;
 
 var spotify = new Spotify(keys.spotify);
 
-var initialLoad = true;
-
 var searchType = process.argv[2];
 
 var searchTerm = process.argv.splice(3).join(" ");
@@ -76,7 +74,12 @@ spotifySearch(searchTerm)
 break;
 
 case "concert-this":
+        if (searchTerm ==="") {
+            concertSearch("Jonas Brothers") 
+        } else {
+
 concertSearch(searchTerm)
+        }
 break;
 
 case "movie-this":
