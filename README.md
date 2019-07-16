@@ -12,7 +12,7 @@
 
 > Also uses the built in Node FS command to read an external text file 
 
-#### The keys.js, .env file and DotEnv node package used to process and protect the Spotify API key 
+#### The keys.js, .env file and DotEnv node package are used to process and protect the Spotify API key 
 
 *!!!!You will need to create your own .env file and format it as below!!!!*
 
