@@ -119,6 +119,11 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 ![Liri-do2](lirid2.png)
 
+### node liri.js log.txt file showing search logging
+
+![Liri-log](lirilog.png)
+
+
 
 
 
