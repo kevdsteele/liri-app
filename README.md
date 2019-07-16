@@ -5,7 +5,7 @@
 ## liri-app dependencies 
 
 * **Node.JS** 
-*Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages*
+> *Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages*
 
 This application supports the base command of node liri.js with four command switches
 
