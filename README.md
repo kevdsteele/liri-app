@@ -81,7 +81,7 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 * The swich statement for **do-what-it-says** first uses FS to read the external text file values and then passes the values to the primary liriBot function
 
 
-## Screenshots of liri-app in action 
+# Screenshots of liri-app in action 
 
 ### node liri.js - no command entered 
 
@@ -93,8 +93,15 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 ### node liri.js spotify-this no search term
 
-![Liri-spotify1](liri3.png)
+![Liri-spotify2](liri3.png)
 
+### node liri.js concert-this backstreet boys
+
+![Liri-concert1](liric1.png)
+
+### node liri.js concert-this no search term
+
+![Liri-concert2](liric2.png)
 
 
 
