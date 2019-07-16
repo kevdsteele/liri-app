@@ -85,7 +85,7 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 ### node liri.js - no command entered 
 
-![Liri-no-command]("./liri1.png")
+![Liri-no-command](liri1.png)
 
 
 
