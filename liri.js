@@ -20,13 +20,16 @@ var log = console.log;
 
 var spotify = new Spotify(keys.spotify);
 
+var initialLoad = true;
+
 var searchType = process.argv[2];
 
 var searchTerm = process.argv.splice(3).join(" ");
 
 /* on screen instructions */
 
-log(chalk.gray.bold("******************************************************************************"))
+function instructions () {
+    log(chalk.gray.bold("******************************************************************************"))
 log(chalk.gray.bold("******************************************************************************"))
 log("");
 log(chalk.hex("#ff8800").inverse("************************ Welcome to Liri Bot *********************************"))
@@ -40,6 +43,10 @@ log("");
 
 log(chalk.gray.bold("******************************************************************************"))
 log(chalk.gray.bold("******************************************************************************"))
+
+}
+
+instructions();
 
 /* begin switch logic */
 
@@ -84,7 +91,7 @@ break;
 case "do-what-it-says":
   fs.readFile("random.txt", "utf8", function(error, data){
       if (error){
-          return console.log(error);
+          return log(error);
       }
 
       var textArray = data.split(",");
@@ -111,15 +118,19 @@ function spotifySearch (track) {
     spotify
     .search({ type: "track", query: track })
     .then(function(response) {
-      console.log(response.tracks.items[0].artists[0].name);  
-      console.log(response.tracks.items[0].name);  
-      console.log(response.tracks.items[0].album.name);  
-      console.log(response.tracks.items[0].preview_url);  
-      
+      log(chalk.red.inverse("Top Spotify search result for " + track))
+      log("Artist name: " + response.tracks.items[0].artists[0].name);  
+      log("Track name: " + response.tracks.items[0].name);  
+      log("Album name: " + response.tracks.items[0].album.name); 
+      if (response.tracks.items[0].preview_url !== null) {
+      log("Preview link: " + response.tracks.items[0].preview_url);  
+      } else {
+          log("Preview link not available")
+      }
   
     })
     .catch(function(err) {
-      console.log(err);
+      log(err);
     });
 
 }
@@ -127,13 +138,14 @@ function spotifySearch (track) {
 function concertSearch (band) {
     axios.get("https://rest.bandsintown.com/artists/" + band+ "/events?app_id=codingbootcamp").then(
         function(response) {
-          console.log(response.data[0].lineup[0])
-         console.log(response.data[0].venue.name)
-         console.log(response.data[0].venue.city + " " + response.data[0].venue.region)
-         console.log(moment(response.data[0].venue.datetime).format( "MM/DD/YYYY"));
+        log(chalk.blue.inverse("Top concert result for " + band))
+         log("Concert name: " + response.data[0].lineup[0])
+         log("Venue name: " + response.data[0].venue.name)
+         log("Venue location: " + response.data[0].venue.city + " " + response.data[0].venue.region)
+         log("Concert date: " +moment(response.data[0].venue.datetime).format( "MM/DD/YYYY"));
         })
         .catch(function(err) {
-            console.log(err);
+            log(err);
         });
     
 
@@ -143,35 +155,36 @@ function movieSearch (movie) {
 
     axios.get("http://www.omdbapi.com/?t=" + movie +"&plot=short&apikey=trilogy").then(
         function(response) {
-          console.log("The movie's Title is: " + response.data.Title);
-          console.log("The movie's Year is: " + response.data.Year);
-          console.log("The movie's IMDB rating is: " + response.data.imdbRating);
-          console.log("The movie's RT is: " + response.data.Ratings[1].Value );
-          console.log("The movie's Country is: " + response.data.Country);
-          console.log("The movie's Language is: " + response.data.Language);
-          console.log("The movie's Plot is: " + response.data.Plot);
-          console.log("The movie's Actors are: " + response.data.Actors);
+          log(chalk.black.inverse("Top Movie result for " + movie))
+          log("The movie's Title is: " + response.data.Title);
+          log("The movie's Year is: " + response.data.Year);
+          log("The movie's IMDB rating is: " + response.data.imdbRating);
+          log("The movie's RT rating is: " + response.data.Ratings[1].Value );
+          log("The movie's Country is: " + response.data.Country);
+          log("The movie's Language is: " + response.data.Language);
+          log("The movie's Plot is: " + response.data.Plot);
+          log("The movie's Actors are: " + response.data.Actors);
       
         })
         .catch(function(error) {
           if (error.response) {
             // The request was made and the server responded with a status code
             // that falls out of the range of 2xx
-            console.log("---------------Data---------------");
-            console.log(error.response.data);
-            console.log("---------------Status---------------");
-            console.log(error.response.status);
-            console.log("---------------Status---------------");
-            console.log(error.response.headers);
+            log("---------------Data---------------");
+            log(error.response.data);
+            log("---------------Status---------------");
+            log(error.response.status);
+            log("---------------Status---------------");
+            log(error.response.headers);
           } else if (error.request) {
             // The request was made but no response was received
             // `error.request` is an object that comes back with details pertaining to the error that occurred.
-            console.log(error.request);
+            log(error.request);
           } else {
             // Something happened in setting up the request that triggered an Error
-            console.log("Error", error.message);
+            log("Error", error.message);
           }
-          console.log(error.config);
+          log(error.config);
         });
 }
 

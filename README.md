@@ -53,6 +53,8 @@ SPOTIFY_SECRET=your_spotify_secret <br/>
 
 > Accesses a text file named random.txt which contains a command switch and search term that is read and then executed
 
+* Example: *node liri.js do-what-it-says*
+
 ### liri-app Organization
 
 #### Logging
