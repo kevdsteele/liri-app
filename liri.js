@@ -48,8 +48,8 @@ instructions();
 
 /* begin switch logic */
 
-if (searchType === "" ) {
-    console.log("Please enter a command to begin a search")
+if (searchType === undefined) {
+    log(chalk.red.inverse("Please enter a command to begin a search"))
 } else {
 liriBot(searchType, searchTerm)
 
