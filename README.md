@@ -5,7 +5,9 @@
 ## liri-app dependencies 
 
 * **Node.JS** must be installed to run liri-app
-> *Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages must be installed before running liri-app*
+> *Axios, Chalk, DotEnv, Moment, Node-Spotify-API node packages must also be installed before running liri-app*
+
+> Also uses the built in Node FS command to read an external text file 
 
 ## This application is run by typing node liri.js with one of four command switches
 
@@ -36,8 +38,22 @@
 
 > Accesses a text file named random.txt which contains a command switch and search term that is read and then executed
 
-### liri-app consists of 5 functions
-### liriBot is the prmary function that processes the search type and search term processed via argv values and calls one of 4 functions using a switch statement.
+### liri-app Organization
+#### Functions
+1. liriBot is the primary function that processes the search type and search term processed via argv values and calls one of 4 functions using a switch statement. 
+
+2. spotifySearch uses node-spotify-api to search Spotify
+
+3. concertSearch
+
+4. movieSearch 
+
+#### Switch Statement to evaluate command line agruements
+
+#### keys.js, .env file and DotEnv node package used to process and protect the Spotify API key 
+
+
+
 
 
 
