@@ -61,7 +61,7 @@
 
 ####SPOTIFY API KEYS
 
-SPOTIFY_ID=your_spotify_ID \n
+SPOTIFY_ID=your_spotify_ID <br/>
 SPOTIFY_SECRET=your_spotify_secret
 
 
