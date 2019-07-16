@@ -47,9 +47,9 @@
 
 2. spotifySearch uses node-spotify-api to search Spotify
 
-3. concertSearch
+3. concertSearch uses Axios to search Bands in Town API
 
-4. movieSearch 
+4. movieSearch uses Axios to search OMDB API
 
 #### Switch Statement to evaluate command line agruements and call the associated function
 
