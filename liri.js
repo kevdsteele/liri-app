@@ -24,8 +24,28 @@ var searchType = process.argv[2];
 
 var searchTerm = process.argv.splice(3).join(" ");
 
+/* on screen instructions */
+
+log(chalk.gray.bold("******************************************************************************"))
+log(chalk.gray.bold("******************************************************************************"))
+log("");
+log(chalk.hex("#ff8800").inverse("************************ Welcome to Liri Bot *********************************"))
+
+log("");
+log(chalk.blue.bold("type "+ chalk.blue.inverse("node liri.js concert-this")) +(chalk.blue.bold(" + a band or artist name to search for concerts ")))
+log(chalk.blue.bold("type "+ chalk.red.inverse("node liri.js spotify-this")) +(chalk.blue.bold(" + a song name to search for songs ")))
+log(chalk.blue.bold("type "+ chalk.black.inverse("node liri.js movie-this")) +(chalk.blue.bold(" + a movie name to search for movies ")))
+log(chalk.blue.bold("type "+ chalk.magenta.inverse("node liri.js do-what-it-says")) +(chalk.blue.bold(" to read from a local file list ")))
+log("");
+
+log(chalk.gray.bold("******************************************************************************"))
+log(chalk.gray.bold("******************************************************************************"))
+
 /* begin switch logic */
 
+if (searchType === "" ) {
+    console.log("Please enter a command to begin a search")
+} else {
 liriBot(searchType, searchTerm)
 
 function liriBot(searchType, searchTerm) {
@@ -35,7 +55,7 @@ function liriBot(searchType, searchTerm) {
             log(err);
         }
     })
-console.log("Liri bot searching ...")
+
 
 switch(searchType) {
 
@@ -72,32 +92,19 @@ case "do-what-it-says":
       searchType=textArray[0];
       searchTerm=textArray[1];
 
-   console.log(searchTerm)
+ 
 
      liriBot(searchType, searchTerm)
 
       
   })  
-
 }
 }
+}
 
 
 
-log(chalk.gray.bold("********************************************************************"))
-log(chalk.gray.bold("********************************************************************"))
-log("");
-log(chalk.hex("#ff8800").inverse("******************* Welcome to Liri Bot ****************************"))
 
-log("");
-log(chalk.blue.bold("type "+ chalk.blue.inverse("node liri.js concert-this")) +(chalk.blue.bold(" + a band or artist name to search for concerts ")))
-log(chalk.blue.bold("type "+ chalk.red.inverse("node liri.js spotify-this")) +(chalk.blue.bold(" + a song name to search for songs ")))
-log(chalk.blue.bold("type "+ chalk.black.inverse("node liri.js movie-this")) +(chalk.blue.bold(" + a movie name to search for movies ")))
-log(chalk.blue.bold("type "+ chalk.magenta.inverse("node liri.js do-what-it-says")) +(chalk.blue.bold(" to read from a local file list ")))
-log("");
-
-log(chalk.gray.bold("********************************************************************"))
-log(chalk.gray.bold("********************************************************************"))
 
 
 function spotifySearch (track) {
