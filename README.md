@@ -5,7 +5,7 @@
 
 ## liri-app is a CLI application that is a play on Apple's Siri voice assistant. Type text commands in a terminal window to retrieve results. 
 
-## liri-app dependencies 
+## liri-app Dependencies 
 
 * **[Node.JS](https://nodejs.org/en/download/)** must be installed to run liri-app
 > *[Axios](https://www.npmjs.com/package/axios), [Chalk](https://www.npmjs.com/package/chalk), [DotEnv](https://www.npmjs.com/package/dotenv), [Moment](https://www.npmjs.com/package/moment),[Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api) node packages must also be installed before running liri-app*
