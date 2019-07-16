@@ -1,3 +1,5 @@
+/* required modules/files */
+
 require("dotenv").config();
 
 var axios =require("axios");
@@ -6,11 +8,15 @@ var moment = require("moment");
 
 var chalk = require("chalk");
 
-var log = console.log;
-
 var keys= require("./keys");
 
 var Spotify = require("node-spotify-api")
+
+var fs= require("fs");
+
+/* global variables */
+
+var log = console.log;
 
 var spotify = new Spotify(keys.spotify);
 
@@ -18,11 +24,28 @@ var searchType = process.argv[2];
 
 var searchTerm = process.argv.splice(3).join(" ");
 
-switch( searchType) {
+/* begin switch logic */
+
+liriBot(searchType, searchTerm)
+
+function liriBot(searchType, searchTerm) {
+
+    fs.appendFile("log.txt", searchType + ", " + searchTerm + ", ", function (err){
+        if(err) {
+            log(err);
+        }
+    })
+console.log("Liri bot searching ...")
+
+switch(searchType) {
 
 case "spotify-this":
 
+if (searchTerm ==="") {
+    spotifySearch("I saw the sign Ace of Base") 
+} else {
 spotifySearch(searchTerm)
+}
 break;
 
 case "concert-this":
@@ -30,23 +53,47 @@ concertSearch(searchTerm)
 break;
 
 case "movie-this":
-movieSearch(searchTerm)
 
+        if (searchTerm ==="") {
+            movieSearch("Mr Nobody") 
+        } else {
+        movieSearch(searchTerm)
+        }
+break;
+
+case "do-what-it-says":
+  fs.readFile("random.txt", "utf8", function(error, data){
+      if (error){
+          return console.log(error);
+      }
+
+      var textArray = data.split(",");
+
+      searchType=textArray[0];
+      searchTerm=textArray[1];
+
+   console.log(searchTerm)
+
+     liriBot(searchType, searchTerm)
+
+      
+  })  
+
+}
 }
 
 
 
-
 log(chalk.gray.bold("********************************************************************"))
 log(chalk.gray.bold("********************************************************************"))
 log("");
-log(chalk.blue.inverse("******************* Welcome to Liri Bot ****************************"))
+log(chalk.hex("#ff8800").inverse("******************* Welcome to Liri Bot ****************************"))
 
 log("");
 log(chalk.blue.bold("type "+ chalk.blue.inverse("node liri.js concert-this")) +(chalk.blue.bold(" + a band or artist name to search for concerts ")))
-log(chalk.blue.bold("type "+ chalk.red.inverse("node liri.js spotify-this")) +(chalk.blue.bold(" + a band or artist name to search for concerts ")))
-log(chalk.blue.bold("type "+ chalk.black.inverse("node liri.js movie-this")) +(chalk.blue.bold(" + a band or artist name to search for concerts ")))
-log(chalk.blue.bold("type "+ chalk.magenta.inverse("node liri.js do-what-it-says")) +(chalk.blue.bold(" + a band or artist name to search for concerts ")))
+log(chalk.blue.bold("type "+ chalk.red.inverse("node liri.js spotify-this")) +(chalk.blue.bold(" + a song name to search for songs ")))
+log(chalk.blue.bold("type "+ chalk.black.inverse("node liri.js movie-this")) +(chalk.blue.bold(" + a movie name to search for movies ")))
+log(chalk.blue.bold("type "+ chalk.magenta.inverse("node liri.js do-what-it-says")) +(chalk.blue.bold(" to read from a local file list ")))
 log("");
 
 log(chalk.gray.bold("********************************************************************"))
@@ -77,8 +124,11 @@ function concertSearch (band) {
          console.log(response.data[0].venue.name)
          console.log(response.data[0].venue.city + " " + response.data[0].venue.region)
          console.log(moment(response.data[0].venue.datetime).format( "MM/DD/YYYY"));
-        }
-      );
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+    
 
 }
 
