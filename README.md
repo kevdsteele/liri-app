@@ -42,6 +42,9 @@
 > Accesses a text file named random.txt which contains a command switch and search term that is read and then executed
 
 ### liri-app Organization
+
+#### Logging
+*All liri-app commands are logged in a local file named log.txt*
 #### Functions
 1. liriBot is the primary function that processes the search type and search term via argv values and calls one of 3 functions using a switch statement. 
 
