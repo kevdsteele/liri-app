@@ -69,3 +69,72 @@ The movie's Language is: English, American Sign Language
 The movie's Plot is: In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.
  
 The movie's Actors are: Emily Blunt, John Krasinski, Millicent Simmonds, Noah Jupe
+------------------------------------------------------------
+
+Search type was do-what-it-says, Search term was 
+ 
+
+------------------------------------------------------------
+
+Search type was movie-this, Search term was "a quiet place"
+ 
+The movie's Title is: A Quiet Place
+ 
+The movie's Year is: 2018
+ 
+The movie's IMDB rating is: 7.6
+ 
+The movie's RT rating is: 95%
+ 
+The movie's Country is: USA
+ 
+The movie's Language is: English, American Sign Language
+ 
+The movie's Plot is: In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.
+ 
+The movie's Actors are: Emily Blunt, John Krasinski, Millicent Simmonds, Noah Jupe
+------------------------------------------------------------
+
+Search type was movie-this, Search term was star wars
+ 
+The movie's Title is: Star Wars: Episode IV - A New Hope
+ 
+The movie's Year is: 1977
+ 
+The movie's IMDB rating is: 8.6
+ 
+The movie's RT rating is: 93%
+ 
+The movie's Country is: USA
+ 
+The movie's Language is: English
+ 
+The movie's Plot is: Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.
+ 
+The movie's Actors are: Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing
+------------------------------------------------------------
+
+Search type was spotify-this, Search term was i want it that way
+ 
+Artist name: Backstreet Boys
+
+Track name: I Want It That Way
+
+Album name: The Hits--Chapter One
+
+Preview link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=ab1463c5c1aa480cb45798bc1fe21b8f
+------------------------------------------------------------
+
+Search type was concert-this, Search term was j lo
+ 
+Concert name: Jennifer Lopez
+ 
+Venue name: Prudential Center
+ 
+Venue location: Newark NJ
+ 
+Concert date: 07/18/2019
+------------------------------------------------------------
+
+Search type was dfdf, Search term was 
+ 
