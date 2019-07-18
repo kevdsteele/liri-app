@@ -24,6 +24,14 @@ var searchType = process.argv[2];
 
 var searchTerm = process.argv.splice(3).join(" ");
 
+var spotifyArray =[];
+
+var concertArray=[];
+
+var movieArray=[];
+
+var divider = "\n------------------------------------------------------------\n\n";
+
 /* on screen instructions */
 
 function instructions () {
@@ -55,7 +63,7 @@ liriBot(searchType, searchTerm)
 
 function liriBot(searchType, searchTerm) {
 
-    fs.appendFile("log.txt", searchType + ", " + searchTerm + ", ", function (err){
+    fs.appendFile("log.txt", divider + "Search type was " + searchType + ", " + "Search term was " + searchTerm + "\n \n", function (err){
         if(err) {
             log(err);
         }
@@ -108,6 +116,12 @@ case "do-what-it-says":
 
       
   })  
+
+  break;
+
+  default:
+      log(chalk.inverse.red("Command not recognized. Please refer to the onscreen instructions for allowed commands"))
+
 }
 }
 }
@@ -122,14 +136,27 @@ function spotifySearch (track) {
     .search({ type: "track", query: track })
     .then(function(response) {
       log(chalk.red.inverse("Top Spotify search result for " + track))
-      log("Artist name: " + response.tracks.items[0].artists[0].name);  
-      log("Track name: " + response.tracks.items[0].name);  
-      log("Album name: " + response.tracks.items[0].album.name); 
+      var prevLink =""
+
       if (response.tracks.items[0].preview_url !== null) {
-      log("Preview link: " + response.tracks.items[0].preview_url);  
+      prevLink= "Preview link: " + response.tracks.items[0].preview_url;  
       } else {
-          log("Preview link not available")
+          prevLink="Preview link not available"
       }
+      spotifyArray = [
+        "Artist name: " + response.tracks.items[0].artists[0].name,
+        "Track name: " + response.tracks.items[0].name,
+        "Album name: " + response.tracks.items[0].album.name,
+        prevLink
+      ].join("\n\n")
+      
+    
+      fs.appendFile("log.txt", spotifyArray, function (err){
+        if(err) {
+            log(err);
+        }
+    })
+      console.log(spotifyArray);
   
     })
     .catch(function(err) {
@@ -142,10 +169,22 @@ function concertSearch (band) {
     axios.get("https://rest.bandsintown.com/artists/" + band+ "/events?app_id=codingbootcamp").then(
         function(response) {
         log(chalk.blue.inverse("Top concert result for " + band))
-         log("Concert name: " + response.data[0].lineup[0])
-         log("Venue name: " + response.data[0].venue.name)
-         log("Venue location: " + response.data[0].venue.city + " " + response.data[0].venue.region)
-         log("Concert date: " +moment(response.data[0].venue.datetime).format( "MM/DD/YYYY"));
+
+        concertArray=[
+            "Concert name: " + response.data[0].lineup[0],
+            "Venue name: " + response.data[0].venue.name,
+            "Venue location: " + response.data[0].venue.city + " " + response.data[0].venue.region,
+            "Concert date: " +moment(response.data[0].venue.datetime).format( "MM/DD/YYYY")
+        ].join("\n \n")
+
+        fs.appendFile("log.txt", concertArray, function (err){
+            if(err) {
+                log(err);
+            }
+        })
+        log(concertArray)
+
+         
         })
         .catch(function(err) {
             log(err);
@@ -159,15 +198,24 @@ function movieSearch (movie) {
     axios.get("http://www.omdbapi.com/?t=" + movie +"&plot=short&apikey=trilogy").then(
         function(response) {
           log(chalk.black.inverse("Top Movie result for " + movie))
-          log("The movie's Title is: " + response.data.Title);
-          log("The movie's Year is: " + response.data.Year);
-          log("The movie's IMDB rating is: " + response.data.imdbRating);
-          log("The movie's RT rating is: " + response.data.Ratings[1].Value );
-          log("The movie's Country is: " + response.data.Country);
-          log("The movie's Language is: " + response.data.Language);
-          log("The movie's Plot is: " + response.data.Plot);
-          log("The movie's Actors are: " + response.data.Actors);
-      
+
+          movieArray= [
+          "The movie's Title is: " + response.data.Title,
+          "The movie's Year is: " + response.data.Year,
+          "The movie's IMDB rating is: " + response.data.imdbRating,
+          "The movie's RT rating is: " + response.data.Ratings[1].Value,
+          "The movie's Country is: " + response.data.Country,
+          "The movie's Language is: " + response.data.Language,
+          "The movie's Plot is: " + response.data.Plot,
+          "The movie's Actors are: " + response.data.Actors
+          ].join("\n \n")
+
+          fs.appendFile("log.txt", movieArray, function (err){
+            if(err) {
+                log(err);
+            }
+        })
+          log(movieArray)
         })
         .catch(function(error) {
           if (error.response) {
